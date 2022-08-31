@@ -1,6 +1,5 @@
 import tkinter as tk
 import time
-from turtle import bgcolor
 import pyautogui
 
 class Pomodoro:
