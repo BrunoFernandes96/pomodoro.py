@@ -1,5 +1,6 @@
 import tkinter as tk
 import time
+from turtle import bgcolor
 import pyautogui
 
 class Pomodoro:
@@ -38,6 +39,8 @@ class Pomodoro:
 		self.root.resizable(False, False)
 		self.root.title("Pomodoro Timer")
 
+		self.root.configure(background='black')
+
 		self.min = tk.StringVar(self.root)
 		self.min.set("50")
 		self.sec = tk.StringVar(self.root)
@@ -45,12 +48,12 @@ class Pomodoro:
 
 		self.min_label = tk.Label(self.root,
 								textvariable=self.min, font=(
-			"arial", 22, "bold"), bg="red", fg='black')
+			"arial", 50, "bold"), bg="black", fg='white')
 		self.min_label.pack()
 
 		self.sec_label = tk.Label(self.root,
 								textvariable=self.sec, font=(
-			"arial", 22, "bold"), bg="black", fg='white')
+			"arial", 50, "bold"), bg="black", fg='white')
 		self.sec_label.pack()
 
 		btn_work = tk.Button(self.root, text="Start",
