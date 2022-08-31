@@ -24,7 +24,7 @@ class Pomodoro:
 			timer -= 1
 
 	def break_(self):
-		timer = 10*60
+		timer = 5*60
 		while timer >= 0:
 			pomo.work_break(timer)
 			if timer == 0:
